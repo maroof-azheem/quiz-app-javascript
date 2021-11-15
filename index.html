@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Demo Game</title>
+</head>
+<body>
+
+  <!-- Intro Start -->
+  <div class="intro-container" id="intro">
+    <div class="intro-header">
+      <h2 id="intro-head">Welcome to the Demo Game!</h2>
+      <p>Here you will have an opportunity to answer an interesting question.</p>
+      <p>Click <i>Start</i> to begin</p>
+    </div>
+    <button id="start-btn">Start</button>
+  </div>
+  <!-- Intro end -->
+
+  <!-- Quiz Start -->
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <h4>Answer the following question correctly: <span id="question"></span></h2>
+        <p><i>Select the best answer</i></p>
+      <form id="quiz-form">
+      <ul>
+        <li>
+          <input type="radio" onclick="alertBoxPrompt()" name="answer" id="a" class="answer">
+          <label for="a" id="a_text"></label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" onclick="alertBoxPrompt()" id="b" class="answer">
+          <label for="b" id="b_text"></label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="c" onclick="alertBoxPrompt()" class="answer">
+          <label for="c" id="c_text"></label>
+        </li>
+      </ul>
+    </form>
+      <div class="alert-box" id="alert-box">
+        <h3>Are You Sure?</h3>
+        <div class="button-wrapper">
+          <button id="sure">Sure</button>
+          <button id="not-sure">Not Sure</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Quiz end -->
+  <script src="script.js"></script>
+</body>
+</html>
